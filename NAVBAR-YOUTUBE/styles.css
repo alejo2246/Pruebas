@@ -1,0 +1,104 @@
+*   {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px 0 10px;
+  position: fixed;
+  top: 0;
+  background: #fff;
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.left__burger {
+  font-size: 16px;
+  padding: 12px 14px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+.left__burger:hover{
+  background-color: #ddd;
+}
+.left__icon >img {
+  width: 110px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center center;
+}
+.center {
+  margin: 0 90px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: 650px;
+  gap: 8px;
+}
+.center__input {
+  display: flex;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  overflow: hidden;
+  flex: 1;
+}
+.center__input > input{
+  border: none;
+  padding: 0 15px;
+  outline: none;
+  width: 100%;
+  
+}
+.center__input > input::placeholder{
+  font-size: 16px;
+  color: rgba(136, 136, 136, 0.79);  
+}
+
+.center__input > button{
+  border: none;
+  padding: 0 25px;
+  
+  border-left: 1px solid #ddd;
+  background-color: rgba(238, 238, 238, 0.359);
+  cursor: pointer;
+}
+.center__mic  {
+  font-size: 16px;
+  padding: 12px 14px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(238, 238, 238, 0.372);
+  cursor: pointer;
+}
+.center__mic:hover{
+  background-color: #ddd;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.right > i {
+  padding: 10px 12px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(41, 190, 128);
+  
+}
+p{
+  font-size: 54px;
+  color: red;
+
+}
+.a {
+  margin-top: 50px;
+}

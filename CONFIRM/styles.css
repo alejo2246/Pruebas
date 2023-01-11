@@ -1,0 +1,16 @@
+*   {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.green {
+    background-color: #0f0;
+    color: rgb(1, 128, 50);
+}
+
+.red {
+    background-color: rgb(249, 84, 30);
+    color: #f00;
+}
