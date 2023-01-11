@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .droppable {
+        border: 1px solid black;
+        width: 400px;
+        height: 400px;
+      }
+      .draggable {
+        border: 1px solid red;
+        width: 100px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body dropzone="true">
+    <div dropzone="true" class="droppable"></div>
+    <div draggable="true" class="draggable"></div>
+    <script>
+      const droppable = document.querySelector(".droppable");
+      const draggable = document.querySelector(".draggable");
+      const body = document.querySelector("body");
+      let dragItem = null;
+      let dropZone = null;
+
+      // this doesnt content preventDefault
+      draggable.addEventListener("dragstart", (e) => {
+        console.log({ dragStart: e });
+        dragItem = e.target;
+      });
+
+      // this event occurs when any drag event ends
+      draggable.addEventListener("dragend", (e) => {
+        console.log({ dragEnd: e });
+      });
+
+      // this event occurs when the draggable is over the dropzone
+      droppable.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        dropZone = e.target;
+        e.target.style.border = "2px solid blue";
+        console.log({ dragOver: e.target });
+      });
+
+      // this event occurs when the draggable gets out the dropzone
+      droppable.addEventListener("dragleave", (e) => {
+        e.preventDefault();
+        e.target.style.border = "1px solid black";
+        console.log({ dragLeave: e.target });
+      });
+
+      // this event occurs when the draggable is dropped in the dropzone
+      droppable.addEventListener("drop", (e) => {
+        e.preventDefault();
+        e.target.style.border = "1px solid black";
+        dropZone.appendChild(dragItem);
+        console.log({ drop: e });
+      }); 
+    </script>
+  </body>
+</html>
