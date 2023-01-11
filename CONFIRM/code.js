@@ -2,8 +2,8 @@ const contenedor = document.querySelector(".respuesta");
 
 contenedor.classList.add("green");
 contenedor.innerHTML = "hola";
-if( 1===1){
+if(true){
   contenedor.classList.add("red");
   contenedor.innerHTML = "error";
-}
 
+}
