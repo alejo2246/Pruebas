@@ -19,13 +19,13 @@ const selectedItem = (item) => {
   }
   localStorage.setItem("selectedDays", JSON.stringify(selectedNumber));
   localStorage.setItem("savedMoney", JSON.stringify(saved));
-  subtitle.innerHTML = `Total money saved: ${saved}`;
+  subtitle.innerHTML = `Total money saved: $${saved}`;
 };
 
 const getData = () => {
   let Data = JSON.parse(localStorage.getItem("selectedDays"));
   saved = JSON.parse(localStorage.getItem("savedMoney"));
-  subtitle.innerHTML = `Total money saved: ${saved}`;
+  subtitle.innerHTML = `Total money saved: $${saved}`;
   selectedNumber = [...Data];
   selectedNumber.forEach(elemento => {
     document.getElementById(`item-${elemento}`).classList.toggle("green");

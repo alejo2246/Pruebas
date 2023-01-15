@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'mv boli';
+  font-weight: bold;
 
 }
 html {
@@ -10,13 +11,34 @@ html {
 }
 body {
   margin: 40px;
-  background: rgb(43, 120, 51);
+  background: #FAF8F1;
   border-radius: 40px;
 }
-h1 ,h3{
+img {
+  position: absolute;
+  top: 50px;
+  left: 95px;
+  width: 135px;
+}
+img:nth-child(2){
+  position: absolute;
+  top: 50px;
+  left: 1295px;
+  width: 135px;
+  transform: scaleX(-1);
+}
+h1 {
     padding: 20px;
+    font-size: 38px;
     text-align: center;
-    color: rgb(255, 217, 0)
+    color: #C58940;
+    font-weight: bold;
+}
+h3 {
+    font-size: 26px;
+    text-align: center;
+    color: #C58940;
+    font-weight: 1500;
 }
 .container {
   display: grid;
@@ -26,7 +48,7 @@ h1 ,h3{
   grid-template-rows: 50px;
   grid-auto-rows: 50px;
   justify-content: center;
-  gap: 10px;
+  gap: 14px;
 }
 
 .flex-item {
@@ -37,7 +59,8 @@ h1 ,h3{
   font-size: 16px;
   font-weight: bold;
   border-radius: 3px;
-  box-shadow: 0 0 2px #333;
+  box-shadow: 0 0 2px #333,
+              4px 4px 2px #ccc;
   background: #fff;
 }
 
@@ -46,5 +69,5 @@ h1 ,h3{
 }
 
 .green {
-  background-color: rgb(9, 243, 239);
+  background-color: #E5BA73
 }
