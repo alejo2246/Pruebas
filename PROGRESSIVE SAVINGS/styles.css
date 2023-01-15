@@ -5,10 +5,18 @@
   font-family: sans-serif;
 
 }
-
+html {
+  background: #eee;
+}
+body {
+  margin: 40px;
+  background: rgb(43, 120, 51);
+  border-radius: 40px;
+}
 h1 ,h3{
     padding: 20px;
     text-align: center;
+    color: rgb(255, 217, 0)
 }
 .container {
   display: grid;
@@ -29,8 +37,8 @@ h1 ,h3{
   font-size: 16px;
   font-weight: bold;
   border-radius: 3px;
-  box-shadow: 0 0 2px #333,
-              3px 0px 2px #ccc;
+  box-shadow: 0 0 2px #333;
+  background: #fff;
 }
 
 .flex-item:hover {
@@ -38,5 +46,5 @@ h1 ,h3{
 }
 
 .green {
-  background-color: #6f4;
+  background-color: rgb(9, 243, 239);
 }
