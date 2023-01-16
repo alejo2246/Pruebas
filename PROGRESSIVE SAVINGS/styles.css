@@ -6,6 +6,11 @@
   font-weight: bold;
 
 }
+@media (max-width: 600px){
+  img {
+    display: none;
+  }
+}
 html {
   background: #eee;
 }
@@ -16,15 +21,15 @@ body {
 }
 img {
   position: absolute;
-  top: 50px;
-  left: 95px;
-  width: 135px;
+  top: 9%;
+  left: 9%;
+  width: 8vw;
 }
 img:nth-child(2){
   position: absolute;
-  top: 50px;
-  left: 1295px;
-  width: 135px;
+  top: 9%;
+  left: 83%;
+  width: 8vw;
   transform: scaleX(-1);
 }
 h1 {
