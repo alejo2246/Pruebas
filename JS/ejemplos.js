@@ -32,6 +32,15 @@ class Animal {
     document.write(this.info);
   }
 }
+class Comparator {
+  constructor(num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
+  }
+  compare(num1, num2) {
+    if (typeOf(num1) == integer && typeOf(num2) === integer) return true;
+  }
+}
 
 //HERENCIA
 class Perro extends Animal {

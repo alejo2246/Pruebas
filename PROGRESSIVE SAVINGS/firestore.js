@@ -5,6 +5,8 @@ import {
   getDoc,
   setDoc,
   doc,
+  onSnapshot,
+  deleteDoc
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -38,7 +40,8 @@ export async function insert(money, numbers) {
     throw new Error(error);
   }
 }
-export const getData =() => getDoc(doc(db, "selectedNumbers", "Page1"));
+export const getData = () => getDoc(doc(db, "selectedNumbers", "Page1"));
 
+export const onGetTasks = callback => onSnapshot(doc(db, "selectedNumbers", "Page1"), callback)
 
-
+export const deleteTask = id => deleteDoc(doc(db, "selectedNumbers", "Page1", id))

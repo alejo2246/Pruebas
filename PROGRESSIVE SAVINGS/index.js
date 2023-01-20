@@ -1,4 +1,4 @@
-import { insert, getData } from "./firestore.js";
+import { insert, getData, onGetTasks } from "./firestore.js";
 
 const documentFragment = document.createDocumentFragment();
 const subtitle = document.querySelector(".subtitle");
@@ -29,16 +29,16 @@ const selectedItem = (item) => {
   subtitle.innerHTML = `Total money saved: $${saved}`;
 };
 
-window.addEventListener('DOMContentLoaded', async (e) => {
+window.addEventListener("DOMContentLoaded", async (e) => {
   e.preventDefault();
   let a = await getData();
-  saved = a.data().money
-  let Data = [...a.data().numbers]
+  saved = a.data().money;
+  let Data = [...a.data().numbers];
   subtitle.innerHTML = `Total money saved: $${saved}`;
   selectedNumber = [...Data];
   selectedNumber.forEach((elemento) => {
     document.getElementById(`item-${elemento}`).classList.toggle("green");
-  });  
+  });
 });
 
 for (let i = 1; i <= 365; i++) {
@@ -54,3 +54,22 @@ for (let i = 1; i <= 365; i++) {
 }
 
 container.appendChild(documentFragment);
+
+//OBTENER DATOS GUARDADOS EN UN BOTON
+// const btnsDelete = container.querySelectorAll(".btn-delete");
+// btnsDelete.forEach(btn => {
+//   btn.addEventListener('click',({target: {dataset }}) => {
+//    deleteTask(dataset.id)
+//   });
+// });
+
+//EDITAR DATOS  
+// const btnsEdit = tasksContainer.querySelectorAl1(".btn-edit");
+// btnsEdit.forEach((btn) => {
+//   btn.addEventListener("click", async (e) => {
+//     const doc = await gettask(e.targer.dataset.id);
+//     const task = doc.data();
+//     taskForm["task-title"].value = task.title;
+//     taskForm["task-description"].value = task.description;
+//   });
+// });
