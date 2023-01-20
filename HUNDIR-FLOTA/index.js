@@ -129,7 +129,7 @@ function shot(cuadro, jugador, turno) {
   }
   return cuadro;
 }
-
+//prueba
 function checkGanador(matriz, jugador) {
   for (let i = 0; i < 10; i++) {
     let arraychecked = matriz[i].filter(
