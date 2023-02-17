@@ -2,53 +2,56 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'mv boli';
+  font-family: "mv boli";
   font-weight: bold;
 }
-@media (max-width: 600px){
+/* @media (max-width: 600px) {
   img {
     display: none;
   }
-}
+} */
+
 html {
   background: #eee;
 }
 body {
   margin: 40px;
-  background: #FAF8F1;
+  background: #faf8f1;
   border-radius: 40px;
 }
-img {
-  position: absolute;
-  top: 9%;
-  left: 9%;
-  width: 8vw;
+.containerTitle {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-img:nth-child(2){
-  position: absolute;
-  top: 9%;
-  left: 83%;
-  width: 8vw;
+img {
+  width: 35%;
+  margin: auto;
+}
+img:nth-child(3){
   transform: scaleX(-1);
 }
 h1 {
-    padding: 20px;
-    font-size: 38px;
-    text-align: center;
-    color: #C58940;
-    font-weight: bold;
+  padding: 20px;
+  font-size: 38px;
+  text-align: center;
+  color: #c58940;
+  font-weight: bold;
 }
 h3 {
-    font-size: 26px;
-    text-align: center;
-    color: #C58940;
-    font-weight: 1500;
+  font-size: 26px;
+  text-align: center;
+  color: #c58940;
+  font-weight: 1500;
 }
 .container {
+  position: relative;
   display: grid;
   margin: 20px;
   padding: 12px;
-  grid-template-columns: repeat(auto-fit, minmax(50px,80px));
+  grid-template-columns: repeat(auto-fit, minmax(50px, 80px));
   grid-template-rows: 50px;
   grid-auto-rows: 50px;
   justify-content: center;
@@ -56,22 +59,21 @@ h3 {
 }
 
 .flex-item {
-  cursor:pointer;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
   font-weight: bold;
   border-radius: 3px;
-  box-shadow: 0 0 2px #333,
-              4px 4px 2px #ccc;
+  box-shadow: 0 0 2px #333, 4px 4px 2px #ccc;
   background: #fff;
 }
 
 .flex-item:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .green {
-  background-color: #E5BA73
+  background-color: #e5ba73;
 }
